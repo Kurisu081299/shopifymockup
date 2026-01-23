@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 
 import authRoutes from './routes/auth.routes.js';
 import shopRoutes from './routes/shop.routes.js';
+import browseRoutes from './routes/browse.routes.js';
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/shop', shopRoutes);
+app.use('/browse', browseRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Shopify Mock API running' });
